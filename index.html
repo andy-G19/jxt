@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Amor</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #ffe6e6;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    .card h1 {
+      color: #e60073;
+    }
+    .card p {
+      color: #555;
+      line-height: 1.8;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+    .card button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .card button:hover {
+      background-color: #cc0052;
+    }
+    .album {
+      display: none;
+      margin-top: 20px;
+    }
+    .album img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <audio src="Reik - Sabes (Letra  Lyrics).MP3" autoplay></audio>
+  <div class="card">
+    <h1>Para Mi Amor</h1>
+    <img src="1.jpg" alt="Tu foto">
+    <p>
+      Mi vida, quiero que sepas cuánto significas para mí. Cada día a tu lado es un regalo, 
+      y agradezco al universo por haberte puesto en mi camino. Tu sonrisa ilumina mis días
+      y tu amor llena mi corazón.
+    </p>
+    <button id="showMessage">Haz clic para más</button>
+    <p id="extraMessage" style="display: none; margin-top: 20px;">
+      Eres mi todo, mi razón de ser, y prometo hacerte feliz cada día de nuestras vidas.
+      Te amo más de lo que las palabras pueden expresar.
+    </p>
+    <div class="album" id="album">
+      <img src="2.jpg" alt="Foto 1">
+      <img src="3.jpg" alt="Foto 2">
+      <img src="4.jpg" alt="Foto 3">
+      <img src="5.jpg" alt="Foto 4">
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('showMessage');
+    const extraMessage = document.getElementById('extraMessage');
+    const album = document.getElementById('album');
+
+    button.addEventListener('click', () => {
+      extraMessage.style.display = 'block';
+      album.style.display = 'flex';
+      album.style.flexWrap = 'wrap';
+      album.style.justifyContent = 'center';
+      button.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
