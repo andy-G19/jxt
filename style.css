@@ -61,7 +61,7 @@ body {
   margin-top: 20px;
 }
 
-lbum img {
+.album img {
   width: 100px;
   height: 100px;
   margin: 5px;
@@ -72,11 +72,15 @@ lbum img {
   margin: 5px;
 }
 
-.audio-container {
+
+
+  
+
+  .audio-container, .card-container {
     text-align: center;
   }
   
-.play-button {
+  .play-button {
     background-color: #ff3366;
     color: white;
     border: none;
@@ -89,12 +93,12 @@ lbum img {
     transition: transform 0.2s ease, background-color 0.3s ease;
   }
   
-.play-button:hover {
+  .play-button:hover {
     background-color: #e60073;
     transform: scale(1.1);
   }
   
-.play-button:active {
+  .play-button:active {
     background-color: #cc0052;
     transform: scale(0.95);
   }

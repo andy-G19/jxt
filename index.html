@@ -8,19 +8,12 @@
 
 </head>
 <body>
-  <div class="audio-container">
-    <button id="playAudio" class="play-button">Primero hazme click porfis!!!🎵</button>
+  <div id="musicContainer" class="audio-container">
+    <button id="playAudio" class="play-button">🎵 Reproducir Música</button>
     <audio id="audio" src="a un minuto.mp3"></audio>
   </div>
-<script>
-  const playButton = document.getElementById('playAudio');
-  const audio = document.getElementById('audio');
 
-  playButton.addEventListener('click', () => {
-    audio.play();
-    playButton.style.display = 'none'; // Ocultar el botón tras hacer clic
-  });
-</script>
+<div id="cardContainer" class="card-container" style="display: none;">
   <div class="card">
     <h1>Para Mi Amor</h1>
     <img src="1.jpg" alt="Tu foto">
@@ -41,6 +34,7 @@
       <img src="5.jpg" alt="Foto 4">
     </div>
   </div>
+</div>
 
   <script>
     const button = document.getElementById('showMessage');
@@ -55,5 +49,28 @@
       button.style.display = 'none';
     });
   </script>
+  <script>
+    const playButton = document.getElementById('playAudio');
+    const audio = document.getElementById('audio');
+    const musicContainer = document.getElementById('musicContainer');
+    const cardContainer = document.getElementById('cardContainer');
+    
+    playButton.addEventListener('click', () => {
+      audio.play();
+      musicContainer.style.display = 'none'; // Oculta el botón de música
+      cardContainer.style.display = 'block'; // Muestra la carta
+    });
+    
+    const showMessageButton = document.getElementById('showMessage');
+    
+    
+    showMessageButton.addEventListener('click', () => {
+      extraMessage.style.display = 'block';
+      album.style.display = 'flex';
+      album.style.flexWrap = 'wrap';
+      album.style.justifyContent = 'center';
+      showMessageButton.style.display = 'none';
+    });
+    </script>
 </body>
 </html>
